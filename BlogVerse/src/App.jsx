@@ -4,7 +4,7 @@ import authservice from './appwrite/auth'
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { login, logout } from './store/authSlice'
-import { Header, Footer } from './components'
+import { Header, Footer } from './components/index'
 
 function App() {
   const [loading, setLoading] = React.useState(true)
