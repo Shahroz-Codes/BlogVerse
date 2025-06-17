@@ -7,7 +7,12 @@ import Button from './Button';
 import Input from './Input';
 import Select from './Select';
 import PostCard from './PostCard';
-import Login from './Login'
+import Login from './Login';
+import PostForm from './postForm/PostForm';
+import RTE from './RTE';
+import Signup from './Signup';
+import AuthLayout from './AuthLayout';
+
 
 // Exporting all components for easier imports in other files
 export {
@@ -21,6 +26,10 @@ export {
     Select,
     PostCard,
     Login,
+    PostForm,
+    RTE,
+    Signup,
+    AuthLayout,
     
 };
 
