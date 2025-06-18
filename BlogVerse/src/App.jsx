@@ -12,12 +12,14 @@ function App() {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    authservice.getCurrnetUser()
+    authservice.getCurrentUser()
       .then(userData => {
         if (userData) {
           dispatch(login({ userData }))
+          console.log("Appwrite service :: getCurrentUser :: success", userData);
         } else {
           dispatch(logout())
+          console.log("Appwrite service :: getCurrentUser :: no user data found");
         }
       })
       .finally(() => setLoading(false)
