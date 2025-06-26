@@ -15,14 +15,14 @@ function Home() {
   
     if (posts.length === 0) {
         return (
-            <div className="w-full py-8 mt-4 text-center">
+            <div className="w-full py-8 mt-4 text-center h-9/12">
                 <Container>
-                    <div className="flex flex-wrap">
-                        <div className="p-2 w-full">
-                            <h1 className="text-2xl font-bold hover:text-gray-500">
+                    <div className="h-full">
+                        <span className="p-2 w-full">
+                            <span className="text-2xl font-bold rounded-3xl p-2 backdrop-blur-2xl bg-white/50  text-black hover:text-gray-500">
                                 Login to read posts
-                            </h1>
-                        </div>
+                            </span>
+                        </span>
                     </div>
                 </Container>
             </div>
@@ -44,3 +44,4 @@ function Home() {
 }
 
 export default Home
+

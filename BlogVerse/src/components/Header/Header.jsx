@@ -37,30 +37,30 @@ function Header() {
   ]
 
   return (
-    <header className='py-3 shadow bg-gray-500'>
+    <header className="py-4 shadow-md bg-white text-gray-800 dark:bg-transparent dark:text-white transition-colors duration-300 sticky top-0 z-50">
       <Container>
-        <nav
-          className='flex'
-        >
-          <div
-            className='mr-4'
-          >
-            <Link to='/'>
-              <Logo width='70px' />
-
+        <nav className="flex items-center justify-between">
+          <div className="mr-6">
+            <Link to="/">
+              <Logo width="45px" />
             </Link>
           </div>
-          <ul className='flex items-center gap-4 ml-auto'>
-            {navItems.map((item) => (
+          <ul className="flex items-center gap-4 ml-auto">
+            {navItems.map((item) =>
               item.active ? (
                 <li key={item.name}>
                   <button
                     onClick={() => navigate(item.slug)}
-                    className='inline-bock px-6 py-2 duration-200 hover:bg-blue-100 rounded-full'
-                  >{item.name}</button>
+                    className="px-5 py-2 text-sm rounded-full font-medium tracking-wide 
+                           hover:bg-indigo-100 dark:hover:bg-indigo-900 
+                           hover:text-indigo-700 dark:hover:text-indigo-300 
+                           transition-all duration-300 ease-in-out"
+                  >
+                    {item.name}
+                  </button>
                 </li>
               ) : null
-            ))}
+            )}
             {authStatus && (
               <li>
                 <LogoutBtn />
@@ -69,7 +69,6 @@ function Header() {
           </ul>
         </nav>
       </Container>
-
     </header>
   )
 }
